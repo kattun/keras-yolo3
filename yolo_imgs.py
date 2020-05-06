@@ -7,7 +7,7 @@ from PIL import Image
 
 def detect_img(yolo, score_file):
     df = pd.DataFrame(columns=['ImageID', 'PredictionString'])
-    for i, img_name in enumerate(os.listdir(yolo.input):)
+    for i, img_name in enumerate(os.listdir(yolo.input)):
         try:
             image = Image.open(os.path.join(yolo.input, img_name))
         except:
